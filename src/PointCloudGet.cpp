@@ -5,7 +5,7 @@
 #include <cfenv>
 #include <unistd.h>
 #include "glViewer/scenewindow.hpp"
-#include <UnitreeCameraSDK.hpp>
+#include "UnitreeCameraSDK.hpp"
 
 #define RGB_PCL true ///< Color Point Cloud Enable Flag
 
