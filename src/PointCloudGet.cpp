@@ -1,4 +1,3 @@
-#include "PointCloudGet.hpp"
 #include <GL/gl.h>
 #include <signal.h>
 #include <cerrno>
