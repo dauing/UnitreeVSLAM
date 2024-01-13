@@ -10,7 +10,6 @@
 #define RGB_PCL true ///< Color Point Cloud Enable Flag
 
 
-
 bool killSignalFlag = false;
 void ctrl_c_handler(int s){
     killSignalFlag = true;
@@ -47,10 +46,12 @@ int main(int argc, char *argv[]){
 #if RGB_PCL       
         std::vector<PCLType> pcl_vec;
         if(!cam.getPointCloud(pcl_vec, t)){
+            std::cout << "No data!" << std::endl;
             usleep(1000);
-            sendPointCloud(ip, port, pcl_vec);
             continue;
         }
+        sendPointCloud(ip, port, pcl_vec);
+        std::cout << "Have sent data:" << pcl_vec.size() << std::endl;
 #else        
         std::vector<cv::Vec3f> pcl_vec;
         if(!cam.getPointCloud(pcl_vec, t)){

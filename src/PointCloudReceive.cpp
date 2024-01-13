@@ -5,8 +5,11 @@
 #include <unistd.h>
 #include "glViewer/scenewindow.hpp"
 #include "../include/UnitreeCameraSDK.hpp"
+#include "UdpTrans.hpp"
 
 #define RGB_PCL true ///< Color Point Cloud Enable Flag
+const std::string listenIP = "192.168.123.15";
+int listenPort = 50001;
 
 void DrawScene(const std::vector<PCLType>& pcl_vec) {
     glBegin(GL_POINTS);
@@ -36,24 +39,16 @@ void ctrl_c_handler(int s){
 
 int main(int argc, char *argv[]){
     
-    UnitreeCamera cam("stereo_camera_config.yaml");
-    if(!cam.isOpened())
-        exit(EXIT_FAILURE);
-
-    cam.startCapture();
-    cam.startStereoCompute();
-    
     struct sigaction sigIntHandler;
     sigIntHandler.sa_handler = ctrl_c_handler;
     sigemptyset(&sigIntHandler.sa_mask);
     sigIntHandler.sa_flags = 0;
     sigaction(SIGINT, &sigIntHandler, NULL);
     
-    std::cout << cam.getSerialNumber() << " " <<  cam.getPosNumber() << std::endl;
     
     glwindow::SceneWindow scene(960, 720, "Panorama 3D Scene");
     
-    while(cam.isOpened()){
+    while(true){
         
         if(killSignalFlag){
             break;
@@ -62,16 +57,11 @@ int main(int argc, char *argv[]){
         std::chrono::microseconds t;
 #if RGB_PCL       
         std::vector<PCLType> pcl_vec;
-        if(!cam.getPointCloud(pcl_vec, t)){
-            usleep(1000);
-            continue;
-        }
+        pcl_vec = receivePointCloud(listenIP, listenPort);
+
 #else        
         std::vector<cv::Vec3f> pcl_vec;
-        if(!cam.getPointCloud(pcl_vec, t)){
-            usleep(1000);
-            continue;
-        }
+        pcl_vec = receivePointCloud(listenIP, listenPort);
 #endif
         if (scene.win.alive()) {
             if (scene.start_draw()) {
@@ -81,7 +71,5 @@ int main(int argc, char *argv[]){
         }
     }
     
-    cam.stopStereoCompute();
-    cam.stopCapture();
     return 0;
 }
