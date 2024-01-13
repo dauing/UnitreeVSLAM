@@ -3,6 +3,9 @@
 #include <iostream>  
 #include <vector> 
 #include <StereoCameraCommon.hpp>
+#include <arpa/inet.h>
+#include <unistd.h>
+#include "UdpTrans.hpp"
   
 // 从字节流中反序列化点云数据  
 std::vector<PCLType> deserializePointCloud(const std::vector<char>& buffer) {  
@@ -45,7 +48,7 @@ std::vector<PCLType> receivePointCloud(const std::string& listen_ip, int listen_
         exit(EXIT_FAILURE);  
     }  
   
-    char buffer[1024 * 1024]; // 假设点云数据不会超过1MB，你可以根据需要调整  
+    char buffer[1024 * 1024 * 10]; // 假设点云数据不会超过1MB，你可以根据需要调整  
     socklen_t len = sizeof(servaddr);  
     ssize_t n = recvfrom(sockfd, buffer, sizeof(buffer), MSG_WAITALL, (struct sockaddr *) &servaddr, &len);  
     if (n < 0) {  
@@ -96,6 +99,5 @@ void sendPointCloud(const std::string &dest_ip, int dest_port, const std::vector
         perror("sendto failed");
         exit(EXIT_FAILURE);
     }
-
     close(sockfd);
 }
