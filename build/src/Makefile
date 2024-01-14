@@ -111,19 +111,34 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/CMakeFiles/PointCloudGet.dir/rule:
-	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/PointCloudGet.dir/rule
-.PHONY : src/CMakeFiles/PointCloudGet.dir/rule
+src/CMakeFiles/PointCloudSend.dir/rule:
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/PointCloudSend.dir/rule
+.PHONY : src/CMakeFiles/PointCloudSend.dir/rule
 
 # Convenience name for target.
-PointCloudGet: src/CMakeFiles/PointCloudGet.dir/rule
+PointCloudSend: src/CMakeFiles/PointCloudSend.dir/rule
 
-.PHONY : PointCloudGet
+.PHONY : PointCloudSend
 
 # fast build rule for target.
-PointCloudGet/fast:
-	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudGet.dir/build.make src/CMakeFiles/PointCloudGet.dir/build
-.PHONY : PointCloudGet/fast
+PointCloudSend/fast:
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudSend.dir/build.make src/CMakeFiles/PointCloudSend.dir/build
+.PHONY : PointCloudSend/fast
+
+# Convenience name for target.
+src/CMakeFiles/PointCloudReceive.dir/rule:
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/PointCloudReceive.dir/rule
+.PHONY : src/CMakeFiles/PointCloudReceive.dir/rule
+
+# Convenience name for target.
+PointCloudReceive: src/CMakeFiles/PointCloudReceive.dir/rule
+
+.PHONY : PointCloudReceive
+
+# fast build rule for target.
+PointCloudReceive/fast:
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudReceive.dir/build.make src/CMakeFiles/PointCloudReceive.dir/build
+.PHONY : PointCloudReceive/fast
 
 PointCloudReceive.o: PointCloudReceive.cpp.o
 
@@ -131,7 +146,7 @@ PointCloudReceive.o: PointCloudReceive.cpp.o
 
 # target to build an object file
 PointCloudReceive.cpp.o:
-	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudGet.dir/build.make src/CMakeFiles/PointCloudGet.dir/PointCloudReceive.cpp.o
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudReceive.dir/build.make src/CMakeFiles/PointCloudReceive.dir/PointCloudReceive.cpp.o
 .PHONY : PointCloudReceive.cpp.o
 
 PointCloudReceive.i: PointCloudReceive.cpp.i
@@ -140,7 +155,7 @@ PointCloudReceive.i: PointCloudReceive.cpp.i
 
 # target to preprocess a source file
 PointCloudReceive.cpp.i:
-	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudGet.dir/build.make src/CMakeFiles/PointCloudGet.dir/PointCloudReceive.cpp.i
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudReceive.dir/build.make src/CMakeFiles/PointCloudReceive.dir/PointCloudReceive.cpp.i
 .PHONY : PointCloudReceive.cpp.i
 
 PointCloudReceive.s: PointCloudReceive.cpp.s
@@ -149,8 +164,65 @@ PointCloudReceive.s: PointCloudReceive.cpp.s
 
 # target to generate assembly for a file
 PointCloudReceive.cpp.s:
-	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudGet.dir/build.make src/CMakeFiles/PointCloudGet.dir/PointCloudReceive.cpp.s
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudReceive.dir/build.make src/CMakeFiles/PointCloudReceive.dir/PointCloudReceive.cpp.s
 .PHONY : PointCloudReceive.cpp.s
+
+PointCloudSend.o: PointCloudSend.cpp.o
+
+.PHONY : PointCloudSend.o
+
+# target to build an object file
+PointCloudSend.cpp.o:
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudSend.dir/build.make src/CMakeFiles/PointCloudSend.dir/PointCloudSend.cpp.o
+.PHONY : PointCloudSend.cpp.o
+
+PointCloudSend.i: PointCloudSend.cpp.i
+
+.PHONY : PointCloudSend.i
+
+# target to preprocess a source file
+PointCloudSend.cpp.i:
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudSend.dir/build.make src/CMakeFiles/PointCloudSend.dir/PointCloudSend.cpp.i
+.PHONY : PointCloudSend.cpp.i
+
+PointCloudSend.s: PointCloudSend.cpp.s
+
+.PHONY : PointCloudSend.s
+
+# target to generate assembly for a file
+PointCloudSend.cpp.s:
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudSend.dir/build.make src/CMakeFiles/PointCloudSend.dir/PointCloudSend.cpp.s
+.PHONY : PointCloudSend.cpp.s
+
+UdpTrans.o: UdpTrans.cpp.o
+
+.PHONY : UdpTrans.o
+
+# target to build an object file
+UdpTrans.cpp.o:
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudSend.dir/build.make src/CMakeFiles/PointCloudSend.dir/UdpTrans.cpp.o
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudReceive.dir/build.make src/CMakeFiles/PointCloudReceive.dir/UdpTrans.cpp.o
+.PHONY : UdpTrans.cpp.o
+
+UdpTrans.i: UdpTrans.cpp.i
+
+.PHONY : UdpTrans.i
+
+# target to preprocess a source file
+UdpTrans.cpp.i:
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudSend.dir/build.make src/CMakeFiles/PointCloudSend.dir/UdpTrans.cpp.i
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudReceive.dir/build.make src/CMakeFiles/PointCloudReceive.dir/UdpTrans.cpp.i
+.PHONY : UdpTrans.cpp.i
+
+UdpTrans.s: UdpTrans.cpp.s
+
+.PHONY : UdpTrans.s
+
+# target to generate assembly for a file
+UdpTrans.cpp.s:
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudSend.dir/build.make src/CMakeFiles/PointCloudSend.dir/UdpTrans.cpp.s
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudReceive.dir/build.make src/CMakeFiles/PointCloudReceive.dir/UdpTrans.cpp.s
+.PHONY : UdpTrans.cpp.s
 
 glViewer/glwindow_x11.o: glViewer/glwindow_x11.cpp.o
 
@@ -158,7 +230,8 @@ glViewer/glwindow_x11.o: glViewer/glwindow_x11.cpp.o
 
 # target to build an object file
 glViewer/glwindow_x11.cpp.o:
-	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudGet.dir/build.make src/CMakeFiles/PointCloudGet.dir/glViewer/glwindow_x11.cpp.o
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudSend.dir/build.make src/CMakeFiles/PointCloudSend.dir/glViewer/glwindow_x11.cpp.o
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudReceive.dir/build.make src/CMakeFiles/PointCloudReceive.dir/glViewer/glwindow_x11.cpp.o
 .PHONY : glViewer/glwindow_x11.cpp.o
 
 glViewer/glwindow_x11.i: glViewer/glwindow_x11.cpp.i
@@ -167,7 +240,8 @@ glViewer/glwindow_x11.i: glViewer/glwindow_x11.cpp.i
 
 # target to preprocess a source file
 glViewer/glwindow_x11.cpp.i:
-	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudGet.dir/build.make src/CMakeFiles/PointCloudGet.dir/glViewer/glwindow_x11.cpp.i
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudSend.dir/build.make src/CMakeFiles/PointCloudSend.dir/glViewer/glwindow_x11.cpp.i
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudReceive.dir/build.make src/CMakeFiles/PointCloudReceive.dir/glViewer/glwindow_x11.cpp.i
 .PHONY : glViewer/glwindow_x11.cpp.i
 
 glViewer/glwindow_x11.s: glViewer/glwindow_x11.cpp.s
@@ -176,7 +250,8 @@ glViewer/glwindow_x11.s: glViewer/glwindow_x11.cpp.s
 
 # target to generate assembly for a file
 glViewer/glwindow_x11.cpp.s:
-	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudGet.dir/build.make src/CMakeFiles/PointCloudGet.dir/glViewer/glwindow_x11.cpp.s
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudSend.dir/build.make src/CMakeFiles/PointCloudSend.dir/glViewer/glwindow_x11.cpp.s
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudReceive.dir/build.make src/CMakeFiles/PointCloudReceive.dir/glViewer/glwindow_x11.cpp.s
 .PHONY : glViewer/glwindow_x11.cpp.s
 
 glViewer/scenewindow.o: glViewer/scenewindow.cpp.o
@@ -185,7 +260,8 @@ glViewer/scenewindow.o: glViewer/scenewindow.cpp.o
 
 # target to build an object file
 glViewer/scenewindow.cpp.o:
-	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudGet.dir/build.make src/CMakeFiles/PointCloudGet.dir/glViewer/scenewindow.cpp.o
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudSend.dir/build.make src/CMakeFiles/PointCloudSend.dir/glViewer/scenewindow.cpp.o
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudReceive.dir/build.make src/CMakeFiles/PointCloudReceive.dir/glViewer/scenewindow.cpp.o
 .PHONY : glViewer/scenewindow.cpp.o
 
 glViewer/scenewindow.i: glViewer/scenewindow.cpp.i
@@ -194,7 +270,8 @@ glViewer/scenewindow.i: glViewer/scenewindow.cpp.i
 
 # target to preprocess a source file
 glViewer/scenewindow.cpp.i:
-	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudGet.dir/build.make src/CMakeFiles/PointCloudGet.dir/glViewer/scenewindow.cpp.i
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudSend.dir/build.make src/CMakeFiles/PointCloudSend.dir/glViewer/scenewindow.cpp.i
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudReceive.dir/build.make src/CMakeFiles/PointCloudReceive.dir/glViewer/scenewindow.cpp.i
 .PHONY : glViewer/scenewindow.cpp.i
 
 glViewer/scenewindow.s: glViewer/scenewindow.cpp.s
@@ -203,7 +280,8 @@ glViewer/scenewindow.s: glViewer/scenewindow.cpp.s
 
 # target to generate assembly for a file
 glViewer/scenewindow.cpp.s:
-	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudGet.dir/build.make src/CMakeFiles/PointCloudGet.dir/glViewer/scenewindow.cpp.s
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudSend.dir/build.make src/CMakeFiles/PointCloudSend.dir/glViewer/scenewindow.cpp.s
+	cd /home/wang/桌面/UnitreeVSLAM/build && $(MAKE) -f src/CMakeFiles/PointCloudReceive.dir/build.make src/CMakeFiles/PointCloudReceive.dir/glViewer/scenewindow.cpp.s
 .PHONY : glViewer/scenewindow.cpp.s
 
 # Help Target
@@ -213,11 +291,18 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... PointCloudSend"
 	@echo "... edit_cache"
-	@echo "... PointCloudGet"
+	@echo "... PointCloudReceive"
 	@echo "... PointCloudReceive.o"
 	@echo "... PointCloudReceive.i"
 	@echo "... PointCloudReceive.s"
+	@echo "... PointCloudSend.o"
+	@echo "... PointCloudSend.i"
+	@echo "... PointCloudSend.s"
+	@echo "... UdpTrans.o"
+	@echo "... UdpTrans.i"
+	@echo "... UdpTrans.s"
 	@echo "... glViewer/glwindow_x11.o"
 	@echo "... glViewer/glwindow_x11.i"
 	@echo "... glViewer/glwindow_x11.s"

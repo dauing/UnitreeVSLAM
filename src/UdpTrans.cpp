@@ -28,7 +28,6 @@ std::vector<PCLType> receivePointCloud(const std::string& listen_ip, int listen_
         perror("socket creation failed");  
         exit(EXIT_FAILURE);  
     }  
-  
     int opt = 1;  
     if (setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt))) {  
         perror("setsockopt");  
@@ -48,7 +47,7 @@ std::vector<PCLType> receivePointCloud(const std::string& listen_ip, int listen_
         exit(EXIT_FAILURE);  
     }  
   
-    char buffer[1024 * 1024 * 10]; // 假设点云数据不会超过1MB，你可以根据需要调整  
+    char buffer[1024 * 1024 * 1]; // 假设点云数据不会超过1MB，你可以根据需要调整  
     socklen_t len = sizeof(servaddr);  
     ssize_t n = recvfrom(sockfd, buffer, sizeof(buffer), MSG_WAITALL, (struct sockaddr *) &servaddr, &len);  
     if (n < 0) {  

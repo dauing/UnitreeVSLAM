@@ -71,7 +71,8 @@ clean: src/clean
 # Directory level rules for directory src
 
 # Recursive "all" directory target.
-src/all: src/CMakeFiles/PointCloudGet.dir/all
+src/all: src/CMakeFiles/PointCloudSend.dir/all
+src/all: src/CMakeFiles/PointCloudReceive.dir/all
 
 .PHONY : src/all
 
@@ -81,36 +82,64 @@ src/preinstall:
 .PHONY : src/preinstall
 
 # Recursive "clean" directory target.
-src/clean: src/CMakeFiles/PointCloudGet.dir/clean
+src/clean: src/CMakeFiles/PointCloudSend.dir/clean
+src/clean: src/CMakeFiles/PointCloudReceive.dir/clean
 
 .PHONY : src/clean
 
 #=============================================================================
-# Target rules for target src/CMakeFiles/PointCloudGet.dir
+# Target rules for target src/CMakeFiles/PointCloudSend.dir
 
 # All Build rule for target.
-src/CMakeFiles/PointCloudGet.dir/all:
-	$(MAKE) -f src/CMakeFiles/PointCloudGet.dir/build.make src/CMakeFiles/PointCloudGet.dir/depend
-	$(MAKE) -f src/CMakeFiles/PointCloudGet.dir/build.make src/CMakeFiles/PointCloudGet.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/桌面/UnitreeVSLAM/build/CMakeFiles --progress-num=1,2,3,4 "Built target PointCloudGet"
-.PHONY : src/CMakeFiles/PointCloudGet.dir/all
+src/CMakeFiles/PointCloudSend.dir/all:
+	$(MAKE) -f src/CMakeFiles/PointCloudSend.dir/build.make src/CMakeFiles/PointCloudSend.dir/depend
+	$(MAKE) -f src/CMakeFiles/PointCloudSend.dir/build.make src/CMakeFiles/PointCloudSend.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/桌面/UnitreeVSLAM/build/CMakeFiles --progress-num=6,7,8,9,10 "Built target PointCloudSend"
+.PHONY : src/CMakeFiles/PointCloudSend.dir/all
 
 # Build rule for subdir invocation for target.
-src/CMakeFiles/PointCloudGet.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/桌面/UnitreeVSLAM/build/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/PointCloudGet.dir/all
+src/CMakeFiles/PointCloudSend.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/桌面/UnitreeVSLAM/build/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/PointCloudSend.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/桌面/UnitreeVSLAM/build/CMakeFiles 0
-.PHONY : src/CMakeFiles/PointCloudGet.dir/rule
+.PHONY : src/CMakeFiles/PointCloudSend.dir/rule
 
 # Convenience name for target.
-PointCloudGet: src/CMakeFiles/PointCloudGet.dir/rule
+PointCloudSend: src/CMakeFiles/PointCloudSend.dir/rule
 
-.PHONY : PointCloudGet
+.PHONY : PointCloudSend
 
 # clean rule for target.
-src/CMakeFiles/PointCloudGet.dir/clean:
-	$(MAKE) -f src/CMakeFiles/PointCloudGet.dir/build.make src/CMakeFiles/PointCloudGet.dir/clean
-.PHONY : src/CMakeFiles/PointCloudGet.dir/clean
+src/CMakeFiles/PointCloudSend.dir/clean:
+	$(MAKE) -f src/CMakeFiles/PointCloudSend.dir/build.make src/CMakeFiles/PointCloudSend.dir/clean
+.PHONY : src/CMakeFiles/PointCloudSend.dir/clean
+
+#=============================================================================
+# Target rules for target src/CMakeFiles/PointCloudReceive.dir
+
+# All Build rule for target.
+src/CMakeFiles/PointCloudReceive.dir/all:
+	$(MAKE) -f src/CMakeFiles/PointCloudReceive.dir/build.make src/CMakeFiles/PointCloudReceive.dir/depend
+	$(MAKE) -f src/CMakeFiles/PointCloudReceive.dir/build.make src/CMakeFiles/PointCloudReceive.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wang/桌面/UnitreeVSLAM/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target PointCloudReceive"
+.PHONY : src/CMakeFiles/PointCloudReceive.dir/all
+
+# Build rule for subdir invocation for target.
+src/CMakeFiles/PointCloudReceive.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/桌面/UnitreeVSLAM/build/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/PointCloudReceive.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/桌面/UnitreeVSLAM/build/CMakeFiles 0
+.PHONY : src/CMakeFiles/PointCloudReceive.dir/rule
+
+# Convenience name for target.
+PointCloudReceive: src/CMakeFiles/PointCloudReceive.dir/rule
+
+.PHONY : PointCloudReceive
+
+# clean rule for target.
+src/CMakeFiles/PointCloudReceive.dir/clean:
+	$(MAKE) -f src/CMakeFiles/PointCloudReceive.dir/build.make src/CMakeFiles/PointCloudReceive.dir/clean
+.PHONY : src/CMakeFiles/PointCloudReceive.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

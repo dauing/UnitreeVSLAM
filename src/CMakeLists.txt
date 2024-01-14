@@ -34,8 +34,10 @@ else()
 endif()
 
 if(${ShowPointCloud})
-add_executable(PointCloudReceive ./PointCloudReceive.cpp ./glViewer/glwindow_x11.cpp ./glViewer/scenewindow.cpp)
-target_link_libraries(PointCloudGet ${SDKLIBS} ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} ${X11_LIBRARIES} )
+add_executable(PointCloudReceive ./PointCloudReceive.cpp ./UdpTrans.cpp ./glViewer/glwindow_x11.cpp ./glViewer/scenewindow.cpp)
+target_link_libraries(PointCloudReceive ${SDKLIBS} ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} ${X11_LIBRARIES} )
+add_executable(PointCloudSend ./PointCloudSend.cpp ./UdpTrans.cpp ./glViewer/glwindow_x11.cpp ./glViewer/scenewindow.cpp)
+target_link_libraries(PointCloudSend ${SDKLIBS} ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} ${X11_LIBRARIES} )
 endif()
 
 

@@ -111,17 +111,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named PointCloudGet
+# Target rules for targets named PointCloudSend
 
 # Build rule for target.
-PointCloudGet: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 PointCloudGet
-.PHONY : PointCloudGet
+PointCloudSend: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 PointCloudSend
+.PHONY : PointCloudSend
 
 # fast build rule for target.
-PointCloudGet/fast:
-	$(MAKE) -f src/CMakeFiles/PointCloudGet.dir/build.make src/CMakeFiles/PointCloudGet.dir/build
-.PHONY : PointCloudGet/fast
+PointCloudSend/fast:
+	$(MAKE) -f src/CMakeFiles/PointCloudSend.dir/build.make src/CMakeFiles/PointCloudSend.dir/build
+.PHONY : PointCloudSend/fast
+
+#=============================================================================
+# Target rules for targets named PointCloudReceive
+
+# Build rule for target.
+PointCloudReceive: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 PointCloudReceive
+.PHONY : PointCloudReceive
+
+# fast build rule for target.
+PointCloudReceive/fast:
+	$(MAKE) -f src/CMakeFiles/PointCloudReceive.dir/build.make src/CMakeFiles/PointCloudReceive.dir/build
+.PHONY : PointCloudReceive/fast
 
 # Help Target
 help:
@@ -131,7 +144,8 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... PointCloudGet"
+	@echo "... PointCloudSend"
+	@echo "... PointCloudReceive"
 .PHONY : help
 
 

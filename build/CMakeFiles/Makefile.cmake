@@ -134,5 +134,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "src/CMakeFiles/PointCloudGet.dir/DependInfo.cmake"
+  "src/CMakeFiles/PointCloudSend.dir/DependInfo.cmake"
+  "src/CMakeFiles/PointCloudReceive.dir/DependInfo.cmake"
   )
