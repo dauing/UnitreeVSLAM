@@ -8,7 +8,7 @@
 #include "UdpTrans.hpp"
 
 #define RGB_PCL true ///< Color Point Cloud Enable Flag
-const std::string listenIP = "192.168.123.14";
+const std::string listenIP = "192.168.123.100";
 int listenPort = 50001;
 
 void DrawScene(const std::vector<PCLType>& pcl_vec) {
@@ -47,6 +47,7 @@ int main(int argc, char *argv[]){
     
     
     glwindow::SceneWindow scene(960, 720, "Panorama 3D Scene");
+    std::cout << "Glwindow has been created." << std::endl;
     
     while(true){
         
@@ -59,6 +60,7 @@ int main(int argc, char *argv[]){
         std::cout << "Prepare to recevie..." << std::endl;       
         std::vector<PCLType> pcl_vec;
         pcl_vec = receivePointCloud(listenIP, listenPort);
+        std::cout << "Point cloud received." << std::endl;
         if (pcl_vec.size()==0){
             usleep(1000);
             std::cout << "No data!" << std::endl;

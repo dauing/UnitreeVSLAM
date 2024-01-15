@@ -10,14 +10,12 @@
 // 从字节流中反序列化点云数据  
 std::vector<PCLType> deserializePointCloud(const std::vector<char>& buffer) {  
     std::vector<PCLType> pcl_vec;  
-    pcl_vec.reserve(buffer.size() / sizeof(PCLType));  
-  
+    pcl_vec.reserve(buffer.size() / sizeof(PCLType)); 
     for (size_t i = 0; i < buffer.size(); i += sizeof(PCLType)) {  
-        PCLType point;  
+        PCLType point; 
         std::memcpy(&point, &buffer[i], sizeof(PCLType));  
         pcl_vec.push_back(point);  
     }  
-  
     return pcl_vec;  
 }  
   
@@ -65,15 +63,19 @@ std::vector<PCLType> receivePointCloud(const std::string& listen_ip, int listen_
     socklen_t len = sizeof(servaddr); 
     //声明一个字符数组 buffer 来存储接收到的数据
 
+    std::cout << "Prepare to receive data." << std::endl;
 
     ssize_t n = recvfrom(sockfd, buffer, sizeof(buffer), MSG_WAITALL, (struct sockaddr *) &servaddr, &len);  
     if (n < 0) {  
         perror("recvfrom failed");  
         exit(EXIT_FAILURE);  
     }  
+    std::cout << "Receive number:" << n << std::endl;
     //使用 recvfrom 函数接收数据
   
-    close(sockfd);  
+    close(sockfd);
+
+    std::cout << "Prepare to deserialize data." << std::endl;  
     return deserializePointCloud(std::vector<char>(buffer, buffer + n));  
 }
 
